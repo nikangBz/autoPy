@@ -2,8 +2,16 @@
 import push
 import time
 #def 
+#可调参数：脱离战斗时间_stepInitTime，场景切换时间_stepBlackTime
+#time设置
+	#切换场景time
+def _stepBlackTime():
+	time.sleep(5)
+def _stepInitTime():
+	time.sleep(10)
 #保证脱离战斗
 def _stepSleepInitModule():
+	
 	time.sleep(1)
 	push.touchD()
 	time.sleep(0.1)
@@ -13,8 +21,9 @@ def _stepSleepInitModule():
 	push.pushSpace()
 def _stepSleepInit():
 	_stepSleepInitModule()
-	time.sleep(10)
+	_stepInitTime()
 	_stepSleepInitModule()
+	
 #走N步路
 def _runN(func,N):
 	i = 0
@@ -23,6 +32,7 @@ def _runN(func,N):
 		i+=1
 #小精灵PC治疗
 def _stepPC():
+		
 		time.sleep(2)
 		push.pushSpace()
 		time.sleep(4)
@@ -33,27 +43,39 @@ def _stepPC():
 		push.pushSpace()
 		time.sleep(4)
 		push.pushSpace()
-#time设置
-	#切换场景time
-def _stepBlackTime():
-	time.sleep(5)
+		
+
 #来回设置
 def _stepBackHome10001():
 		#脱离战斗
+		print("正在脱离战斗...")
 		_stepSleepInit()
+		print("正在矫正位置...")
+		#矫正位置
+		_runN(push.pushD,10)
+		_stepSleepInit()
+		_runN(push.pushA,4)
+		_stepSleepInit()
+		print("脱离战斗！")
 		#往回走
-		_runN(pushS,4)
+		print("正在返回PC宠物中心...")
+		_runN(push.pushS,4)
 		_stepBlackTime()
-		_runN(pushA,20)
-		_runN(pushW,4)
+		_runN(push.pushA,20)
+		_runN(push.pushW,4)
 		_stepBlackTime()
-		_runN(pushW,20)
+		print("返回PC宠物中心！")
+		_runN(push.pushW,20)
+		print("正在对宠物进行治疗...")
 		_stepPC()
+		print("宠物治疗结束！")
 def _stepBackBattle10001():
-		_runN(pushS,18)
+		print("正在返回战场...")
+		_runN(push.pushS,18)
 		_stepBlackTime()
-		_runN(pushD,20)
-		_runN(pushW,4)
+		_runN(push.pushD,20)
+		_runN(push.pushW,4)
+		print("返回战场!")
 ##############		
 
 

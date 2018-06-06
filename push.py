@@ -2,6 +2,7 @@
 import win32api
 import win32con
 import time
+#可调参数_pushSleepTime
 #def
 def _pushSleepTime():
 	time.sleep(0.09)
