@@ -80,10 +80,14 @@ def _stepBackBattle10001():
 
 
 def stepBackHome(N):
+	if N == 0:
+		pass
 	if N == 10001:
 		_stepBackHome10001()
 		
 def stepBackBattle(N):
+	if N == 0:
+		pass
 	if N == 10001:
 		_stepBackBattle10001()
 
