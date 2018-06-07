@@ -9,7 +9,7 @@ import time
 def _stepBlackTime():
 	time.sleep(8)
 def _stepInitTime():
-	time.sleep(15)
+	time.sleep(20)
 #保证脱离战斗
 def _stepSleepInitModule():
 	
@@ -20,6 +20,7 @@ def _stepSleepInitModule():
 	time.sleep(0.1)
 	push.pushSpace()
 	push.pushSpace()
+	time.sleep(4)
 def _stepSleepInit():
 	_stepSleepInitModule()
 	_stepInitTime()
@@ -44,7 +45,7 @@ def _stepPC():
 		push.pushSpace()
 		time.sleep(4)
 		push.pushSpace()
-		
+		time.sleep(4)
 
 #来回设置
 def _stepBackHome10001():
@@ -63,7 +64,7 @@ def _stepBackHome10001():
 		print("正在返回PC宠物中心...")
 		_runN(push.pushS,4)
 		_stepBlackTime()
-		_runN(push.pushA,20)
+		_runN(push.pushA,18)
 		_runN(push.pushW,4)
 		_stepBlackTime()
 		print("返回PC宠物中心！")
