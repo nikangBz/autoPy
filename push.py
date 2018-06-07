@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*
 #import
 import win32api
 import win32con

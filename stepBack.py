@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*
 #import
 import push
 import time
@@ -6,9 +7,9 @@ import time
 #time设置
 	#切换场景time
 def _stepBlackTime():
-	time.sleep(5)
+	time.sleep(8)
 def _stepInitTime():
-	time.sleep(10)
+	time.sleep(15)
 #保证脱离战斗
 def _stepSleepInitModule():
 	
@@ -52,8 +53,9 @@ def _stepBackHome10001():
 		_stepSleepInit()
 		print("正在矫正位置...")
 		#矫正位置
-		_runN(push.pushD,10)
+		_runN(push.pushD,20)
 		_stepSleepInit()
+		_runN(push.pushD,20)
 		_runN(push.pushA,4)
 		_stepSleepInit()
 		print("脱离战斗！")
@@ -71,10 +73,11 @@ def _stepBackHome10001():
 		print("宠物治疗结束！")
 def _stepBackBattle10001():
 		print("正在返回战场...")
-		_runN(push.pushS,18)
+		_runN(push.pushS,20)
 		_stepBlackTime()
 		_runN(push.pushD,20)
 		_runN(push.pushW,4)
+		_stepBlackTime()
 		print("返回战场!")
 ##############		
 

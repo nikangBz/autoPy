@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*
 #main-MtMoon
 #文件关系如下
 #主文件-挂机场景文件-地点设置 - 按键设置
@@ -15,8 +16,8 @@ time.sleep(2)
 while True:
 	#scenesFromBattle(使用技能,场景地点编号,在场景战斗时间)
 	#scenesFromHome(stepBattleN,stepBackN,battleTimeN):
-	scenes.scenesFromBattle(10004,10001,500)
-	#scenes.scenesFromHome(10004,10001,60)
+	#scenes.scenesFromBattle(10004,10001,500)
+	scenes.scenesFromHome(10002,10001,500)
 
 
 

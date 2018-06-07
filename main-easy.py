@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*
 #纯场景刷
 #import
 import scenes
