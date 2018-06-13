@@ -33,6 +33,10 @@ def pushV():
 	win32api.keybd_event(86,0,0,0)
 	_pushSleepTime()
 	win32api.keybd_event(86,0,win32con.KEYEVENTF_KEYUP,0)
+def pushEsc():
+	win32api.keybd_event(27,0,0,0)
+	_pushSleepTime()
+	win32api.keybd_event(27,0,win32con.KEYEVENTF_KEYUP,0)
 ###touch###
 def touchW():
 		#W=87 S=83 A=65 D=68 V=86 Space=32
@@ -53,3 +57,6 @@ def touchSpace():
 def touchV():
 	win32api.keybd_event(86,0,0,0)
 	win32api.keybd_event(86,0,win32con.KEYEVENTF_KEYUP,0)
+def touchEsc():
+	win32api.keybd_event(27,0,0,0)
+	win32api.keybd_event(27,0,win32con.KEYEVENTF_KEYUP,0)
